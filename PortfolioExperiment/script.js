@@ -1,6 +1,23 @@
 console.log("it's working");
 
+var blogpost1 = document.getElementById('blogpost1');
+var readblog1 = document.getElementById('readblogpost1');
+var closeblog1 = document.getElementById('closeblogpost1');
 
+  if($('body').is('.blog')){
+    readblog1.addEventListener('click', function() {
+      blogpost1.style.display = "block";
+      readblog1.style.display = "none";
+
+
+  });
+}
+  if($('body').is('.blog')){
+closeblog1.addEventListener('click', function() {
+  blogpost1.style.display = "none";
+  readblog1.style.display = "block";
+});
+}
 
 
 //FADING IN

@@ -269,6 +269,32 @@ main p {
     width: 50%;
 }
 
+.column2 {
+  float: left;
+  width: 20%;
+  text-align: center;
+  padding-bottom: 40px;
+}
+.column2 img{
+max-width: 180px;
+width: 90%;
+height: auto;
+margin-left: auto;
+margin-right: auto;
+transition: transform 1s;
+}
+.column2 img:hover {
+  backface-visibility: hidden;
+  transform: rotate(90deg);
+}
+
+.row2 {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
+  width: 80%;
+}
+
 /* Clear floats after the columns */
 .row:after {
     content: "";
@@ -405,6 +431,9 @@ padding-bottom: 0px;
        width: 100%;
    }
 .row {
+  padding-bottom: 10px;
+}
+.row2 {
   padding-bottom: 40px;
 }
  .container4 {
