@@ -1,3 +1,102 @@
+.clearyellow {
+  margin-bottom: 20px;
+}
+
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:100%;
+  height: 100%;
+  display: none;
+  background-color:rgba(0,0,0,.7);
+
+  color: white;
+  z-index: 99;
+}
+#overlay2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:100%;
+  height: 100%;
+  display: none;
+  background-color:rgba(0,0,0,.7);
+
+  color: white;
+  z-index: 99;
+}
+#overlay3 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:100%;
+  height: 100%;
+  display: none;
+  background-color:rgba(0,0,0,.7);
+
+  color: white;
+  z-index: 99;
+}
+
+/* overlay img center positioning */
+#overlay img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: auto;
+  z-index: 100;
+}
+#overlay2 img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: auto;
+  z-index: 100;
+}
+#overlay3 img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: auto;
+  z-index: 100;
+}
+
+/* overlay close button position */
+#close {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  width: 40px;
+  font-size: 20px;
+}
+#close2 {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  width: 40px;
+  font-size: 20px;
+}
+#close3 {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  width: 40px;
+  font-size: 20px;
+}
+
+
+
 #container {
   height: auto;
 }
@@ -6,6 +105,22 @@
   margin: auto;
   padding: auto;
 }
+#gladlist {
+  border: 0px;
+}
+
+
+.header img {
+  width: auto;
+  display: inline-block;
+  float: right;
+  max-width: 200px;
+  max-height: 100px;
+  padding-right: 80px;
+margin-bottom: 22px;
+}
+
+
 
 .hideme {
   opacity: 0;
@@ -359,7 +474,12 @@ div.sfathead img {
 .container4 {
   display: block;
   margin-left: auto;
-  margin-right: auto
+  margin-right: auto;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-top: 10px;
+  max-width: 80%;
+  width: 400px;
 }
 
 .container5 {
@@ -368,7 +488,49 @@ div.sfathead img {
   width: 80%;
   display: block;
   margin-left: auto;
-  margin-right: auto
+  margin-right: auto;
+  padding-top: 40px;
+}
+
+.scrollwrap {
+  padding: 15px;
+  max-width: 80%;
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  border: 3px solid black;
+  overflow: hidden;
+  padding: 0px;
+  max-height: 300px;
+position: relative;
+}
+.scrollwrap img {
+  max-height: 300px;
+}
+
+.scroller {
+position: relative;
+  top: 0px;
+  left: 0px;
+
+
+  animation-name: scrolling;
+  animation-duration: 200s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes scrolling {
+  0% {
+    left: 0px;
+  }
+  100% {
+    left: -17000px;
+  }
 }
 
 div.tightrope {
@@ -425,12 +587,16 @@ hr {
 h1 {
   font-size: 48px;
   font-family: 'Roboto Condensed', sans-serif;
-  margin-left: 5%;
+  margin-left: 9%;
   margin-right: auto;
   color: black;
   text-align: left;
   margin-bottom: 10px;
   padding-top: 3%;
+}
+.header h1 {
+  float: left;
+  margin-bottom: 30px;
 }
 
 
@@ -440,7 +606,7 @@ h2 {
 
   color: black;
   text-align: center;
-  margin-top: 10%;
+  margin-top: 20px;
 }
 
 /* FOOTER STYLES  */
@@ -531,7 +697,7 @@ footer h3 {
 
 /* CHANGES FOR MOBILE */
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 970px) {
   main p {
     max-width: 90%;
     padding-right: 1em;
@@ -568,6 +734,14 @@ footer h3 {
     text-align: center;
     font-size: 2em;
     padding-top: 0.2em;
+  }
+  .header h1 {
+    float: none;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .header img {
+    display: none;
   }
   .container3 {
     max-width: 93%;
@@ -746,96 +920,5 @@ footer h3 {
   ul {
     margin-right: auto;
     width: 80%;
-  }
-}
-
-/* Style the Image Used to Trigger the Modal */
-
-#myImg {
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-  max-width: 90%;
-}
-
-#myImg:hover {
-  opacity: 0.7;
-}
-
-/* The Modal (background) */
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  padding-top: 100px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.9);
-}
-
-/* Modal Content (Image) */
-
-.modal-content {
-  margin: auto;
-  display: block;
-  max-width: 80%;
-}
-
-/* Add Animation - Zoom in the Modal */
-
-.modal-content, #caption {
-  animation-name: zoom;
-  animation-duration: 0.6s;
-}
-
-@keyframes zoom {
-  from {
-    transform: scale(0)
-  }
-  to {
-    transform: scale(1)
-  }
-}
-
-/* The Close Button */
-
-.close {
-  position: absolute;
-  top: 15px;
-  left: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.close:hover, .close:focus {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.modcontainer {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 90%;
-  text-align: center;
-}
-
-/* 100% Image Width on Smaller Screens */
-
-@media only screen and (max-width: 700px) {
-  .modal-content {
-    width: 100%;
-    padding: 0px;
-    margin-right: auto;
-    margin-left: auto;
-    text-align: center;
   }
 }

@@ -20,6 +20,67 @@ closeblog1.addEventListener('click', function() {
 }
 
 
+var charlieTh = document.getElementById('charlieTh');
+var overlay = document.getElementById('overlay');
+var close = document.getElementById('close');
+
+// prompt2: add click to charlieTh with anonymous function to show the overlay
+if($('body').is('.art')){
+charlieTh.addEventListener('click', function(){
+  overlay.style.display="block";
+});
+}
+// prompt3: add a click to close overlay
+if($('body').is('.art')){
+close.addEventListener('click', function(){
+  overlay.style.display="none";
+
+});
+}
+
+var josh = document.getElementById('josh');
+var overlay2 = document.getElementById('overlay2');
+var close2 = document.getElementById('close2');
+
+// prompt2: add click to charlieTh with anonymous function to show the overlay
+if($('body').is('.art')){
+josh.addEventListener('click', function(){
+  overlay2.style.display="block";
+});
+}
+// prompt3: add a click to close overlay
+if($('body').is('.art')){
+close2.addEventListener('click', function(){
+  overlay2.style.display="none";
+
+});
+}
+
+
+
+
+var gladlist = document.getElementById('gladlist');
+var overlay3 = document.getElementById('overlay3');
+var close3 = document.getElementById('close3');
+
+// prompt2: add click to charlieTh with anonymous function to show the overlay
+if($('body').is('.graphic')){
+gladlist.addEventListener('click', function(){
+  overlay3.style.display="block";
+});
+}
+// prompt3: add a click to close overlay
+if($('body').is('.graphic')){
+close3.addEventListener('click', function(){
+  overlay3.style.display="none";
+
+});
+}
+
+
+
+
+
 //FADING IN
 
 $(function(){  // $(document).ready shorthand
@@ -69,28 +130,4 @@ function showDivs(n) {
      x[i].style.display = "none";
   }
   x[slideIndex-1].style.display = "block";
-}
-
-
-//MOdal stuff
-
-var modal = document.getElementById('myModal');
-
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementById('myImg');
-var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("caption");
-img.onclick = function(){
-
-    modal.style.display = "block";
-    modalImg.src = this.src;
-
-}
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
 }
